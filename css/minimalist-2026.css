@@ -1,0 +1,681 @@
+/* ============================================
+   MINIMALIST PORTFOLIO REDESIGN 2026
+   Fresh, Clean, Modern Design
+   ============================================ */
+
+/* ============================================
+   1. MODERN COLOR PALETTE & BASE STYLES
+   ============================================ */
+
+:root {
+    --primary-bg: #0a0a0a;
+    --secondary-bg: #1a1a1a;
+    --accent-color: #00d4ff;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-hover: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background: var(--primary-bg);
+    font-family: 'Inter', 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   2. MODERN TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 200;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 0px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+strong {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* ============================================
+   3. NAVIGATION - MINIMAL & ELEGANT
+   ============================================ */
+
+#header {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+#logo {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+#logo:hover {
+    color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+.navigation-menu li a {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navigation-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navigation-menu li a:hover::after,
+.navigation-menu li.active a::after {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   4. WELCOME SECTION - HERO MINIMAL
+   ============================================ */
+
+.welcome-box {
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.welcome-first {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.welcome-title {
+    font-size: 82px;
+    font-weight: 200;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+.welcome-box p {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.scroll-down {
+    margin-top: 80px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.scroll-down span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* ============================================
+   5. ABOUT SECTION - CLEAN CARDS
+   ============================================ */
+
+.about-section {
+    padding: 80px 20px;
+}
+
+.about-contentbox {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 60px 50px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.about-contentbox:hover {
+    background: var(--card-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px var(--shadow-light);
+}
+
+.about-contentbox span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.about-contentbox h2 {
+    font-size: 42px;
+    font-weight: 300;
+    margin: 15px 0 30px;
+}
+
+.about-contentbox p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* Counter boxes - Minimal style */
+.counter-box {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 35px 25px;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.counter-box:hover {
+    background: var(--card-bg);
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.counter-icon {
+    font-size: 32px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.count-number {
+    font-size: 42px;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.counter-box {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   6. SERVICES SECTION - MODERN CARDS
+   ============================================ */
+
+.services-section {
+    padding: 40px 0;
+}
+
+.title-block {
+    margin-bottom: 60px;
+}
+
+.title-block span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.title-block h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-transform: none;
+}
+
+.service-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 50px 40px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.service-box:hover::before {
+    transform: translateX(100%);
+}
+
+.service-box:hover {
+    background: var(--card-hover);
+    border-color: var(--accent-color);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px var(--shadow-light);
+}
+
+.service-icon {
+    font-size: 42px;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+
+.service-box:hover .service-icon {
+    transform: scale(1.1);
+    color: var(--text-primary);
+}
+
+.service-box h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.service-box p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.service-box em {
+    font-size: 13px;
+    color: var(--accent-color);
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* ============================================
+   7. PORTFOLIO/WORK SECTION - MINIMAL GRID
+   ============================================ */
+
+.gallery-section {
+    padding: 40px 0;
+}
+
+.portfolio-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin: 15px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px var(--shadow-light);
+    border-color: var(--accent-color);
+}
+
+.portfolio-item .thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    height: 280px;
+    background: var(--secondary-bg);
+}
+
+.portfolio-item .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease;
+    opacity: 0.8;
+}
+
+.portfolio-item:hover .thumb img {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.thumb-inner {
+    padding: 35px 30px;
+    background: var(--secondary-bg);
+}
+
+.thumb-inner h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.thumb-inner p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.thumb-inner a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.thumb-inner a:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
+}
+
+/* ============================================
+   8. CONTACT SECTION - CLEAN & SIMPLE
+   ============================================ */
+
+.contact-section {
+    padding: 40px 0;
+}
+
+.contact-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 60px 50px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.contact-box:hover {
+    background: var(--card-hover);
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px var(--shadow-light);
+}
+
+.contact-row {
+    padding: 25px;
+    font-size: 18px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contact-row:hover {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.contact-row i {
+    font-size: 24px;
+    margin-right: 20px;
+    color: var(--accent-color);
+}
+
+/* ============================================
+   9. SOCIAL ICONS - MINIMAL DESIGN
+   ============================================ */
+
+.social-icons li a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons li a:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+.social-icons li a i {
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+/* ============================================
+   10. SMOOTH ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUpMinimal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate[data-animate="fadeInUp"] {
+    animation: fadeInUpMinimal 0.8s ease-out;
+}
+
+/* ============================================
+   11. SCROLLBAR - MINIMAL STYLE
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* ============================================
+   12. VIDEO OVERLAY - SUBTLE
+   ============================================ */
+
+#myVideo {
+    opacity: 0.15;
+}
+
+/* ============================================
+   13. RESPONSIVE - MOBILE FIRST
+   ============================================ */
+
+@media (max-width: 992px) {
+    .welcome-title {
+        font-size: 56px;
+    }
+    
+    h1 {
+        font-size: 48px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    .service-box,
+    .about-contentbox,
+    .contact-box {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+    
+    .welcome-box p {
+        font-size: 16px;
+    }
+    
+    .service-box,
+    .about-contentbox,
+    .contact-box {
+        padding: 35px 25px;
+        margin-bottom: 20px;
+    }
+    
+    .counter-box {
+        margin: 10px 0;
+    }
+    
+    .title-block h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-title {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .navigation-menu li a {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   14. OWL CAROUSEL ADJUSTMENTS
+   ============================================ */
+
+.owl-carousel .owl-nav button {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease !important;
+}
+
+.owl-carousel .owl-nav button:hover {
+    background: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    transform: scale(1.1);
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+    background: var(--border-color) !important;
+    transition: all 0.3s ease !important;
+}
+
+.owl-carousel .owl-dots .owl-dot.active span,
+.owl-carousel .owl-dots .owl-dot:hover span {
+    background: var(--accent-color) !important;
+}
+
+/* ============================================
+   15. PRELOADER - MINIMAL
+   ============================================ */
+
+.preloader {
+    background: var(--primary-bg);
+}
+
+.preloader-bounce span {
+    background: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* ============================================
+   16. UTILITY CLASSES
+   ============================================ */
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.bg-minimal {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}

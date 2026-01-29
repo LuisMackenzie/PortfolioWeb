@@ -1,0 +1,206 @@
+/* Modern Fresh Styles for Portfolio - 2026 */
+
+/* Enhanced Typography */
+body {
+    font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Logo Styling */
+#logo {
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#logo:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Welcome Section */
+.welcome-title {
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-first {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+/* Modern Service Cards */
+.service-box {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.service-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.service-icon {
+    font-size: 48px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.service-box:hover .service-icon {
+    transform: rotateY(360deg);
+}
+
+/* Enhanced Counter Boxes */
+.counter-box {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.counter-box:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.count-number {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+/* Modern Portfolio Items */
+.portfolio-item {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.thumb img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .thumb img {
+    transform: scale(1.1);
+}
+
+/* Modern Contact Section */
+.contact-box {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
+}
+
+.contact-row {
+    padding: 15px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.contact-row:hover {
+    transform: translateX(10px);
+}
+
+.contact-row i {
+    margin-right: 15px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+/* Enhanced Social Icons */
+.social-icons li a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons li a:hover {
+    transform: translateY(-5px) scale(1.2);
+}
+
+/* Smooth Animations */
+@keyframes fadeInUpSmooth {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Block Enhancement */
+.title-block h2 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title-block span {
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 36px;
+    }
+
+    .service-box {
+        padding: 20px;
+    }
+
+    .contact-box {
+        padding: 25px;
+    }
+}
+
+/* Loading Animation Enhancement */
+.preloader-bounce span {
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}

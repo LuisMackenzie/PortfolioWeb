@@ -231,6 +231,10 @@ strong {
     padding: 35px 25px;
     transition: all 0.3s ease;
     margin: 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
 }
 
 .counter-box:hover {
@@ -253,13 +257,6 @@ strong {
     color: var(--text-primary);
     display: block;
     margin-bottom: 5px;
-}
-
-.counter-box {
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-secondary);
 }
 
 /* ============================================

@@ -602,7 +602,8 @@ a#logo {
   position: absolute;
   z-index: 99;
   bottom: 0;
-  text-align: left;
+  text-align: center;
+  text-color: rgba(250,250,250,0.25);
   padding: 20px;
   background-color: rgba(250,250,250,0.25);
   width: 100%;
